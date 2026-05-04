@@ -34,10 +34,10 @@ public class MainMenuScreen implements Screen {
         quitButtonTexture.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
         optionsButtonTexture.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
 
-        ImageButton playButton = ButtonUtils.createButton(playButtonTexture);
-        ImageButton inventoryButton = ButtonUtils.createButton(inventoryButtonTexture);
-        ImageButton optionsButton = ButtonUtils.createButton(optionsButtonTexture);
-        ImageButton quitButton = ButtonUtils.createButton(quitButtonTexture);
+        ImageButton playButton = GameUtils.createButton(playButtonTexture);
+        ImageButton inventoryButton = GameUtils.createButton(inventoryButtonTexture);
+        ImageButton optionsButton = GameUtils.createButton(optionsButtonTexture);
+        ImageButton quitButton = GameUtils.createButton(quitButtonTexture);
 
 
         playButton.addListener(new ClickListener() {

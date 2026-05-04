@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 
-public class ButtonUtils {
+public class GameUtils {
 
     public static ImageButton createButton(Texture tex) {
         //make a texture into a texture region
