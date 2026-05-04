@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de55d79f-8ac0-4aa7-bb59-66131e900489" name="Changes" comment="prototyped a shield upgrade. better card system on the agenda">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/ButtonUtils.java" afterDir="false" />
+    <list default="true" id="de55d79f-8ac0-4aa7-bb59-66131e900489" name="Changes" comment="fixed file structure naming">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/MainMenuScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776862667644</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed file structure naming">
+      <option name="closed" value="true" />
+      <created>1777896780711</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777896780711</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +274,7 @@
     <MESSAGE value="finished main menu buttons, added optionsscreen and renamed some stuff" />
     <MESSAGE value="game is now playable in a basic state" />
     <MESSAGE value="prototyped a shield upgrade. better card system on the agenda" />
-    <option name="LAST_COMMIT_MESSAGE" value="prototyped a shield upgrade. better card system on the agenda" />
+    <MESSAGE value="fixed file structure naming" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed file structure naming" />
   </component>
 </project>
