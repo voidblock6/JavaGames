@@ -22,17 +22,12 @@ public class MainMenuScreen implements Screen {
         this.game = game;
         stage = new Stage(new FitViewport(480, 270));
 
-        titlescreenTexture = new Texture("titlescreen.png");
-        playButtonTexture = new Texture("play_button.png");
-        inventoryButtonTexture = new Texture("inventory_button.png");
-        optionsButtonTexture = new Texture("options_button.png");
-        quitButtonTexture = new Texture("quit_button.png");
+        titlescreenTexture = GameUtils.createTexture("titlescreen.png");
+        playButtonTexture = GameUtils.createTexture("play_button.png");
+        inventoryButtonTexture = GameUtils.createTexture("inventory_button.png");
+        optionsButtonTexture = GameUtils.createTexture("options_button.png");
+        quitButtonTexture = GameUtils.createTexture("quit_button.png");
 
-        titlescreenTexture.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
-        playButtonTexture.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
-        inventoryButtonTexture.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
-        quitButtonTexture.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
-        optionsButtonTexture.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
 
         ImageButton playButton = GameUtils.createButton(playButtonTexture);
         ImageButton inventoryButton = GameUtils.createButton(inventoryButtonTexture);
@@ -76,7 +71,7 @@ public class MainMenuScreen implements Screen {
         table.setFillParent(true);
         table.center();
 
-        table.add(playButton).padBottom(10);
+        table.add(playButton).padBottom(10).padTop(70);
         table.row();
         table.add(inventoryButton).padBottom(10);
         table.row();
@@ -85,6 +80,8 @@ public class MainMenuScreen implements Screen {
         table.add(quitButton);
 
         stage.addActor(table);
+
+
     }
 
     @Override

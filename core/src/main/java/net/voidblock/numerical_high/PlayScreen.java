@@ -52,9 +52,9 @@ public class PlayScreen implements Screen {
         customFont = generator.generateFont(parameter);
         generator.dispose();
 
-        exitbutton = new Texture("return_button.png");
-        gamebackground = new Texture("game_bg.png");
-        shieldcard = new Texture("shield_upgrade_card.png");
+        exitbutton = GameUtils.createTexture("return_button.png");
+        gamebackground = GameUtils.createTexture("game_bg.png");
+        shieldcard = GameUtils.createTexture("shield_upgrade_card.png");
 
         stage = new Stage(new FitViewport(480, 270));
 
