@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de55d79f-8ac0-4aa7-bb59-66131e900489" name="Changes" comment="made methods to clean up code and redid titlescreen">
+    <list default="true" id="de55d79f-8ac0-4aa7-bb59-66131e900489" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/GameUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/GameUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/MainMenuScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/PlayScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lwjgl3/src/main/resources/titlescreen.png" beforeDir="false" afterPath="$PROJECT_DIR$/lwjgl3/src/main/resources/titlescreen.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777902689008</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="made methods to clean up code and redid titlescreen">
+      <option name="closed" value="true" />
+      <created>1777984103362</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777984103362</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import net.voidblock.numerical_high.GameUtils.*;
 
 
 public class MainMenuScreen implements Screen {
@@ -22,17 +23,22 @@ public class MainMenuScreen implements Screen {
         this.game = game;
         stage = new Stage(new FitViewport(480, 270));
 
-        titlescreenTexture = GameUtils.createTexture("titlescreen.png");
-        playButtonTexture = GameUtils.createTexture("play_button.png");
-        inventoryButtonTexture = GameUtils.createTexture("inventory_button.png");
-        optionsButtonTexture = GameUtils.createTexture("options_button.png");
-        quitButtonTexture = GameUtils.createTexture("quit_button.png");
+        Table mainMenuTable = new Table();
+        mainMenuTable.setFillParent(true);
+        mainMenuTable.center();
 
 
-        ImageButton playButton = GameUtils.createButton(playButtonTexture);
-        ImageButton inventoryButton = GameUtils.createButton(inventoryButtonTexture);
-        ImageButton optionsButton = GameUtils.createButton(optionsButtonTexture);
-        ImageButton quitButton = GameUtils.createButton(quitButtonTexture);
+            titlescreenTexture = GameUtils.createTexture("titlescreen.png");
+            playButtonTexture = GameUtils.createTexture("play_button.png");
+            inventoryButtonTexture = GameUtils.createTexture("inventory_button.png");
+            optionsButtonTexture = GameUtils.createTexture("options_button.png");
+            quitButtonTexture = GameUtils.createTexture("quit_button.png");
+
+            ImageButton playButton = GameUtils.createMainMenuButton(playButtonTexture, mainMenuTable );
+            ImageButton inventoryButton = GameUtils.createMainMenuButton(inventoryButtonTexture, mainMenuTable);
+            ImageButton optionsButton = GameUtils.createMainMenuButton(optionsButtonTexture, mainMenuTable);
+            ImageButton quitButton= GameUtils.createMainMenuButton(quitButtonTexture, mainMenuTable);
+
 
 
         playButton.addListener(new ClickListener() {
@@ -67,19 +73,17 @@ public class MainMenuScreen implements Screen {
         background.setSize(480, 270);
         stage.addActor(background);
 
-        Table table = new Table();
-        table.setFillParent(true);
-        table.center();
 
-        table.add(playButton).padBottom(10).padTop(70);
-        table.row();
-        table.add(inventoryButton).padBottom(10);
-        table.row();
-        table.add(optionsButton).padBottom(10);
-        table.row();
-        table.add(quitButton);
 
-        stage.addActor(table);
+        mainMenuTable.add(playButton).padBottom(10).padTop(70);
+        mainMenuTable.row();
+        mainMenuTable.add(inventoryButton).padBottom(10);
+        mainMenuTable.row();
+        mainMenuTable.add(optionsButton).padBottom(10);
+        mainMenuTable.row();
+        mainMenuTable.add(quitButton);
+
+        stage.addActor(mainMenuTable);
 
 
     }

@@ -1,5 +1,6 @@
 package net.voidblock.numerical_high;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
@@ -11,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.ScreenUtils;
@@ -22,12 +24,11 @@ import java.util.Random;
 public class PlayScreen implements Screen {
     private final NumericalHigh game;
     private Stage stage;
-    private Texture exitbutton, gamebackground, shieldcard;
+    private Texture exitbutton, gamebackground;
+    private Image shieldCard, revertCard;
     private BitmapFont customFont;
 
     private int score = 1024;
-    private float shieldWidth = 60f;
-    private float shieldHeight = 84f;
     private String inputNumber = "";
     private final int MAX_LENGTH = 7;
     private int numberOfGuesses;
@@ -39,11 +40,15 @@ public class PlayScreen implements Screen {
 
     private Label scoreLabel;
     private Label inputLabel;
-    private ImageButton shieldBtn;
-    private ImageButton quitBtn;
+    private ImageButton exitButton;
 
     public PlayScreen(final NumericalHigh game) {
         this.game = game;
+
+        Table playerInventoryTable = new Table();
+        playerInventoryTable.bottom();
+        playerInventoryTable.setFillParent(true);
+
 
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("PixelOperator.ttf"));
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
@@ -54,7 +59,14 @@ public class PlayScreen implements Screen {
 
         exitbutton = GameUtils.createTexture("return_button.png");
         gamebackground = GameUtils.createTexture("game_bg.png");
-        shieldcard = GameUtils.createTexture("shield_upgrade_card.png");
+        shieldCard =  GameUtils.createCard("shield_upgrade_card.png");
+        revertCard = GameUtils.createCard("revert_upgrade_card.png");
+
+
+        playerInventoryTable.add(revertCard).size(44, 63).padRight(10);
+        playerInventoryTable.add(shieldCard).size(44, 63);
+
+
 
         stage = new Stage(new FitViewport(480, 270));
 
@@ -74,34 +86,32 @@ public class PlayScreen implements Screen {
         inputLabel.setAlignment(Align.center);
         stage.addActor(inputLabel);
 
-        quitBtn = GameUtils.createButton(exitbutton);
+        exitButton = GameUtils.createButton(exitbutton);
 
-        quitBtn.setSize(24, 24);
-        quitBtn.getImage().setFillParent(true);
-        quitBtn.setPosition(480 - 28, 270 - 28);
-        quitBtn.addListener(new ClickListener() {
+        exitButton.setSize(24, 24);
+        exitButton.getImage().setFillParent(true);
+        exitButton.setPosition(480 - 28, 270 - 28);
+        exitButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 game.setScreen(new MainMenuScreen(game));
             }
         });
-        stage.addActor(quitBtn);
+        stage.addActor(exitButton);
 
-        shieldBtn = GameUtils.createButton(shieldcard);
-        shieldBtn.setSize(shieldWidth, shieldHeight);
-        shieldBtn.setPosition(10, 10);
-        shieldBtn.addListener(new ClickListener() {
+        stage.addActor(playerInventoryTable);
+
+
+        shieldCard.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 if (hasShield > 0) {
                     shieldPlayed += 1;
                     hasShield -= 1;
-                    shieldBtn.setVisible(false);
+                    shieldCard.setVisible(false);
                 }
             }
         });
-        stage.addActor(shieldBtn);
-
         hasShield = 1;
         startNewRound();
     }
@@ -113,7 +123,7 @@ public class PlayScreen implements Screen {
         score = 1024;
         isWaiting = false;
         shieldPlayed = 0;
-        if (hasShield > 0) shieldBtn.setVisible(true);
+        if (hasShield > 0) shieldCard.setVisible(true);
         updateLabels();
     }
 
