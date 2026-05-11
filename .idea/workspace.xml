@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de55d79f-8ac0-4aa7-bb59-66131e900489" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/GameUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/GameUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/MainMenuScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/PlayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/voidblock/numerical_high/PlayScreen.java" afterDir="false" />
-    </list>
+    <list default="true" id="de55d79f-8ac0-4aa7-bb59-66131e900489" name="Changes" comment="worked on player game inventory, addded main menu animations." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777984103362</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="worked on player game inventory, addded main menu animations.">
+      <option name="closed" value="true" />
+      <created>1778486582914</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1778486582916</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -305,6 +308,7 @@
     <MESSAGE value="made main menu Scene2d based" />
     <MESSAGE value="made the gamescreen Scene2d based." />
     <MESSAGE value="made methods to clean up code and redid titlescreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="made methods to clean up code and redid titlescreen" />
+    <MESSAGE value="worked on player game inventory, addded main menu animations." />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on player game inventory, addded main menu animations." />
   </component>
 </project>
